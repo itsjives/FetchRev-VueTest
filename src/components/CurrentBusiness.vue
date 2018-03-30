@@ -1,6 +1,6 @@
 <template>
-  <div class="container" v-if="!this.subs.business || !this.subs.subscribers">
-    <p>...Loading</p>
+  <div class="container spinner" v-if="!this.subs.business || !this.subs.subscribers">
+      <p>...Loading</p>
   </div>
   <div class="container" v-else>
   <nav class="nav-bar navbar-expand-lg navbar-light bg-light">
@@ -56,6 +56,14 @@ export default {
 </script>
 
 <style>
+
+  .spinner {
+    margin: 0 auto;
+    margin-top: 20%;
+    font-family: monospace;
+    font-size: 32pt;
+    text-align: center;
+  }
   .row-header {
     margin: 1%;
   }
