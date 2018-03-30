@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import CurrentBusiness from '@/components/CurrentBusiness'
 import NewSub from '@/components/NewSub'
-
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +21,10 @@ export default new Router({
       path: '/:business_id/newSub',
       name: 'NewSub',
       component: NewSub
+    },
+
+    {
+      path:'/redirect', redirect:'/:business_id'
     }
   ]
 })
